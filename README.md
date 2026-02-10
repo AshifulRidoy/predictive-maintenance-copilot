@@ -4,7 +4,7 @@
 
 A hybrid AI system combining ML models for numeric prediction and LangGraph agents for reasoning and explanation. Demonstrates engineering maturity through deterministic orchestration, evidence-backed recommendations via RAG, and complete audit trails.
 
-## 🎯 Overview
+##  Overview
 
 The Predictive Maintenance Copilot is an autonomous AI-powered system that:
 - **Monitors** IoT sensor streams from turbofan engines
@@ -22,7 +22,7 @@ The Predictive Maintenance Copilot is an autonomous AI-powered system that:
 ✅ **Evidence-Backed**: RAG ensures recommendations are grounded in documentation  
 ✅ **Production-Ready**: Complete logging, safety gates, and human approval flows  
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -67,7 +67,7 @@ The Predictive Maintenance Copilot is an autonomous AI-powered system that:
 ### Required
 - **Python 3.9+**
 - **Docker** (for Qdrant vector database)
-- **OpenRouter API Key** ([Get free tier](https://openrouter.ai/))
+- **OpenRouter API Key**
 
 ### Optional (Production)
 - AWS Account (for DynamoDB audit logs)
@@ -82,7 +82,7 @@ cd predictive-maintenance-copilot
 
 # Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  
 
 # Install dependencies
 pip install -e .
@@ -95,7 +95,6 @@ pip install -e .
 cp .env.example .env
 
 # Edit .env and add your OpenRouter API key
-# Get free key at: https://openrouter.ai/
 OPENROUTER_API_KEY=your_key_here
 ```
 
@@ -115,9 +114,6 @@ curl http://localhost:6333/collections
 # Download real NASA turbofan data
 python download_cmapss.py
 
-# Or use synthetic data (auto-generated if CMAPSS not available)
-# The system works with both real and synthetic data
-```
 
 ### 5. Train ML Models
 
@@ -125,22 +121,6 @@ python download_cmapss.py
 # Train anomaly detection and RUL prediction models
 python -m src.ml.trainer
 
-# This will:
-# - Load CMAPSS data (or generate synthetic data if unavailable)
-# - Train LSTM Autoencoder for anomaly detection
-# - Train RUL Predictor for failure prediction
-# - Train Isolation Forest baseline
-# - Save all models to models/ directory
-```
-
-Expected output:
-```
-✓ Loaded 2000 records from synthetic data
-✓ Autoencoder training complete
-✓ RUL Predictor training complete
-✓ Isolation Forest training complete
-Models saved to: models/
-```
 
 ### 5. Build RAG Knowledge Base
 
@@ -148,19 +128,6 @@ Models saved to: models/
 # Index maintenance manuals into Qdrant
 python -m src.rag.index_builder
 
-# This will:
-# - Create sample maintenance manuals
-# - Generate embeddings using sentence-transformers
-# - Build vector index in Qdrant
-```
-
-Expected output:
-```
-✓ Created turbine_maintenance_guide.txt
-✓ Created troubleshooting_procedures.txt
-✓ Created safety_procedures.txt
-✓ Loaded 3 documents
-✓ Index built successfully
 ```
 
 ### 6. Launch Dashboard
@@ -170,9 +137,8 @@ Expected output:
 streamlit run src/ui/app.py
 ```
 
-The dashboard will open at `http://localhost:8501`
 
-## 🎮 Using the System
+## Using the System
 
 ### Dashboard Walkthrough
 
@@ -198,40 +164,9 @@ The system will:
 **Human Approval:**
 When safety thresholds are exceeded, the system requires human approval before executing maintenance plans.
 
-## 📁 Project Structure
 
-```
-predictive-maintenance-copilot/
-├── src/
-│   ├── config.py              # Configuration and settings
-│   ├── data/
-│   │   ├── ingestor.py        # CMAPSS data loading
-│   │   └── preprocessor.py    # Feature engineering
-│   ├── ml/
-│   │   ├── models.py          # PyTorch/sklearn models
-│   │   ├── trainer.py         # Training pipeline
-│   │   └── inference.py       # Inference engine
-│   ├── rag/
-│   │   ├── index_builder.py   # Vector index creation
-│   │   └── retriever.py       # Document retrieval
-│   ├── agent/
-│   │   ├── state.py           # LangGraph state definition
-│   │   ├── nodes.py           # Agent nodes (ML + LLM)
-│   │   └── graph.py           # Workflow orchestration
-│   ├── ui/
-│   │   └── app.py             # Streamlit dashboard
-│   └── utils/
-│       └── logger.py          # Audit trail logging
-├── data/
-│   ├── raw/                   # Sensor data
-│   └── manuals/               # Maintenance manuals
-├── models/                    # Trained model artifacts
-├── docker-compose.yml         # Qdrant service
-├── pyproject.toml            # Dependencies
-└── README.md
-```
 
-## 🔧 Configuration
+##  Configuration
 
 Edit `src/config.py` to customize:
 
@@ -274,7 +209,7 @@ pytest tests/ -v
 - Select Unit 3, Cycle 195
 - Expect: HIGH risk, immediate action, approval required
 
-## 📊 Audit Trail
+## Audit Trail
 
 All decisions are logged for compliance:
 
@@ -288,7 +223,7 @@ Configure AWS credentials in `.env` for DynamoDB logging:
 - `RetrievedEvidence`: RAG retrieval results
 - `ModelMetadata`: Model versions and metrics
 
-## 🔐 Security Best Practices
+##  Security Best Practices
 
 1. **Never commit API keys**: Use `.env` file (gitignored)
 2. **Rotate credentials**: Regularly update OpenRouter API keys
@@ -296,7 +231,7 @@ Configure AWS credentials in `.env` for DynamoDB logging:
 4. **Audit logs**: Enable CloudTrail in production
 5. **Network security**: Use VPC for AWS services
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 ### Qdrant Connection Failed
 ```bash
@@ -307,10 +242,6 @@ docker ps | grep qdrant
 docker-compose restart qdrant
 ```
 
-### OpenRouter API Errors
-- Verify API key in `.env`
-- Check rate limits: [OpenRouter Dashboard](https://openrouter.ai/activity)
-- Free tier: 20 requests/minute
 
 ### Model Not Found
 ```bash
@@ -318,11 +249,7 @@ docker-compose restart qdrant
 python -m src.ml.trainer
 ```
 
-### Import Errors
-```bash
-# Reinstall package
-pip install -e .
-```
+
 
 ## 📚 References
 
@@ -332,27 +259,9 @@ pip install -e .
 - **OpenRouter**: https://openrouter.ai/docs
 - **CMAPSS Dataset**: https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/
 
-## 🤝 Contributing
 
-This is a portfolio/demonstration project. For production use:
-1. Replace synthetic data with real sensor streams
-2. Fine-tune models on domain-specific data
-3. Implement streaming data pipeline (Kafka/Kinesis)
-4. Add comprehensive test suite
-5. Deploy on cloud infrastructure
 
-## 📝 License
 
-MIT License - See LICENSE file
 
-## 👤 Author
 
-Built as a demonstration of:
-- Hybrid AI architecture (ML + LLM)
-- Deterministic agent orchestration with LangGraph
-- RAG for evidence-backed AI decisions
-- Production-ready ML system design
 
----
-
-**Note**: This system uses synthetic data for demonstration. In production, replace with real sensor telemetry and conduct thorough validation before deploying to critical infrastructure.
