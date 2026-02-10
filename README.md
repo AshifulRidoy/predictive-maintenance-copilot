@@ -9,7 +9,7 @@ A hybrid AI system combining ML models for numeric prediction and LangGraph agen
 The Predictive Maintenance Copilot is an autonomous AI-powered system that:
 - **Monitors** IoT sensor streams from turbofan engines
 - **Predicts** equipment failure using trained ML models (LSTM, Autoencoder, Isolation Forest)
-- **Reasons** about root causes using LLM APIs (via OpenRouter)
+- **Reasons** about root causes using LLM APIs (via Bedrock or OpenRouter(Fall back))
 - **Retrieves** maintenance knowledge from manuals using RAG (LlamaIndex + Qdrant)
 - **Generates** actionable repair instructions with human-in-the-loop controls
 - **Maintains** complete audit trails for compliance and debugging
@@ -84,6 +84,7 @@ The Predictive Maintenance Copilot is an autonomous AI-powered system that:
 - **Python 3.9+**
 - **Docker** (for Qdrant vector database)
 - **OpenRouter API Key**
+- **AWS Bedrock (Setup guide) [https://docs.aws.amazon.com/bedrock/latest/userguide/getting-started-setup.html]**
 
 ### Optional (Production)
 - AWS Account (for DynamoDB audit logs)

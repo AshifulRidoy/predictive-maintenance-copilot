@@ -30,6 +30,10 @@ class Config:
     LLM_TEMPERATURE: float = 0.1
     LLM_MAX_TOKENS: int = 1000
     
+    # Bedrock Configuration (if using AWS Bedrock)
+    BEDROCK_MODEL: str = os.getenv("BEDROCK_MODEL", "claude-3-5-haiku")  # or claude-3-5-sonnet, llama-3-70b, etc.
+    BEDROCK_REGION: str = os.getenv("BEDROCK_REGION", "us-east-1")
+
     # AWS Configuration (for production)
     AWS_REGION: str = os.getenv("AWS_REGION", "us-east-1")
     AWS_ACCESS_KEY_ID: Optional[str] = os.getenv("AWS_ACCESS_KEY_ID")

@@ -19,7 +19,8 @@ class AgentNodes:
     def __init__(
         self,
         inference_engine: InferenceEngine,
-        retriever: MaintenanceRetriever
+        retriever: MaintenanceRetriever,
+        use_bedrock: bool = None
     ):
         """
         Initialize agent nodes.
@@ -27,15 +28,27 @@ class AgentNodes:
         Args:
             inference_engine: ML inference engine
             retriever: RAG retriever
+            use_bedrock: Use AWS Bedrock instead of OpenRouter (None = auto-detect from config)
         """
         self.inference_engine = inference_engine
         self.retriever = retriever
         
-        # Initialize LLM client for OpenRouter
-        self.llm_client = OpenAI(
-            base_url=Config.OPENROUTER_BASE_URL,
-            api_key=Config.OPENROUTER_API_KEY
-        )
+        # Determine which LLM provider to use
+        if use_bedrock is None:
+            use_bedrock = Config.LLM_PROVIDER.lower() == "bedrock"
+        
+        # Initialize LLM client
+        if use_bedrock:
+            from src.utils.bedrock import create_bedrock_client
+            print("Using AWS Bedrock for LLM inference")
+            self.llm_client = create_bedrock_client(model_id=Config.BEDROCK_MODEL)
+        else:
+            from openai import OpenAI
+            print("Using OpenRouter for LLM inference")
+            self.llm_client = OpenAI(
+                base_url=Config.OPENROUTER_BASE_URL,
+                api_key=Config.OPENROUTER_API_KEY
+            )
     
     def run_ml_inference(self, state: AgentState) -> AgentState:
         """
