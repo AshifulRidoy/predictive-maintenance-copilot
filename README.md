@@ -14,7 +14,7 @@ The Predictive Maintenance Copilot is an autonomous AI-powered system that:
 - **Generates** actionable repair instructions with human-in-the-loop controls
 - **Maintains** complete audit trails for compliance and debugging
 
-![alt text](https://github.com/AshifulRidoy/predictive-maintenance-copilot/blob/c71d5f0d02eb2728a4ff2922f41e5b91a195d21a/Screenshot%202026-02-10%20at%2011.40.34.png"Dashboard page 1")
+![alt text](https://github.com/AshifulRidoy/predictive-maintenance-copilot/blob/c71d5f0d02eb2728a4ff2922f41e5b91a195d21a/Screenshot%202026-02-10%20at%2011.40.34.png "Dashboard page 1")
 
 ![alt text](https://github.com/AshifulRidoy/predictive-maintenance-copilot/blob/c71d5f0d02eb2728a4ff2922f41e5b91a195d21a/Screenshot%202026-02-10%20at%2011.41.22.png "Dashboard Copilot")
 
