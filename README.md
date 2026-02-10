@@ -109,14 +109,24 @@ docker-compose up -d
 curl http://localhost:6333/collections
 ```
 
-### 4. Train ML Models
+### 4. Download CMAPSS Dataset (Optional)
+
+```bash
+# Download real NASA turbofan data
+python download_cmapss.py
+
+# Or use synthetic data (auto-generated if CMAPSS not available)
+# The system works with both real and synthetic data
+```
+
+### 5. Train ML Models
 
 ```bash
 # Train anomaly detection and RUL prediction models
 python -m src.ml.trainer
 
 # This will:
-# - Generate synthetic CMAPSS data (or use real data if available)
+# - Load CMAPSS data (or generate synthetic data if unavailable)
 # - Train LSTM Autoencoder for anomaly detection
 # - Train RUL Predictor for failure prediction
 # - Train Isolation Forest baseline
