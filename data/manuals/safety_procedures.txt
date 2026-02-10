@@ -1,0 +1,53 @@
+
+SAFETY PROCEDURES AND PRECAUTIONS
+
+GENERAL SAFETY RULES
+1. Always follow lockout/tagout procedures
+2. Wear appropriate PPE (gloves, safety glasses, hearing protection)
+3. Never work on running engines
+4. Maintain clear communication during maintenance
+5. Follow hot engine handling procedures
+
+CRITICAL WARNINGS
+
+⚠️ HIGH TEMPERATURE HAZARD
+- Engine components remain hot for 30+ minutes after shutdown
+- Exhaust gas temperatures can exceed 1400°F
+- Allow adequate cooling time before touching components
+
+⚠️ HIGH PRESSURE SYSTEMS
+- Bleed air pressure: 400 psi
+- Fuel system pressure: 3000 psi
+- Always depressurize systems before disconnecting lines
+
+⚠️ ROTATING MACHINERY
+- Never approach running engine from front
+- Maintain 25-foot safety zone around operating engine
+- Secure all loose objects before engine start
+
+⚠️ FUEL HANDLING
+- No smoking or open flames within 50 feet
+- Use proper grounding to prevent static discharge
+- Clean up spills immediately
+- Proper ventilation required
+
+EMERGENCY PROCEDURES
+
+Engine Fire:
+1. Shut down engine immediately
+2. Activate fire suppression system
+3. Evacuate area
+4. Call emergency services
+
+Uncontained Failure:
+1. Emergency engine shutdown
+2. Clear immediate area
+3. Inspect for secondary damage
+4. Document debris field
+
+Oil System Failure:
+1. Reduce power immediately
+2. Monitor bearing temperatures
+3. Prepare for controlled shutdown
+4. Do not restart without inspection
+            

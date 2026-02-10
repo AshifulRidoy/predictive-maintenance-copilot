@@ -1,0 +1,73 @@
+
+ENGINE TROUBLESHOOTING PROCEDURES
+
+SYMPTOM: High Vibration Levels
+
+Step 1: Immediate Actions
+- Reduce power to idle
+- Monitor vibration trend
+- If vibration >1.0 in/sec, shut down engine
+
+Step 2: Visual Inspection
+- Inspect fan blades for damage
+- Check for loose components
+- Look for oil leaks near bearings
+
+Step 3: Diagnostic Tests
+- Perform vibration spectrum analysis
+- Check bearing temperatures
+- Measure shaft runout
+
+Step 4: Corrective Measures
+- Replace damaged fan blades
+- Rebalance rotor assembly
+- Replace worn bearings
+- Realign engine mounts
+
+SYMPTOM: Increasing Exhaust Temperature
+
+Step 1: Immediate Actions
+- Reduce power by 10%
+- Monitor temperature trend
+- Check for engine fire indications
+
+Step 2: System Checks
+- Verify thermocouple accuracy
+- Check fuel flow rate
+- Inspect combustor section
+
+Step 3: Root Cause Analysis
+- Deteriorated turbine blades
+- Combustor damage
+- Fuel nozzle blockage
+- Cooling air bypass
+
+Step 4: Repair Actions
+- Replace damaged turbine blades
+- Repair/replace combustor cans
+- Clean or replace fuel nozzles
+- Seal air leaks in cooling passages
+
+SYMPTOM: Low Engine Pressure Ratio
+
+Step 1: Performance Analysis
+- Compare current EPR to baseline
+- Check compressor efficiency
+- Measure turbine gas temperature
+
+Step 2: Compressor Assessment
+- Perform compressor wash
+- Inspect for erosion damage
+- Check variable vane rigging
+
+Step 3: Turbine Inspection
+- Borescope turbine blades
+- Measure blade dimensions
+- Check for thermal distortion
+
+Step 4: Restoration
+- Replace eroded compressor blades
+- Restore turbine blade profiles
+- Adjust variable geometry
+- Seal internal leakage paths
+            

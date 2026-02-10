@@ -1,0 +1,68 @@
+
+TURBOFAN ENGINE MAINTENANCE GUIDE
+
+1. VIBRATION MONITORING
+- Normal vibration levels: < 0.5 in/sec
+- High vibration (>0.7 in/sec) indicates:
+  * Unbalanced rotor
+  * Bearing degradation
+  * Fan blade damage
+- Corrective actions:
+  * Inspect fan blades for FOD (Foreign Object Damage)
+  * Check bearing clearances
+  * Perform rotor balancing if needed
+
+2. TEMPERATURE MONITORING
+- Normal operating temperature (T30): 1580°F ± 20°F
+- High temperature (>1620°F) causes:
+  * Accelerated component wear
+  * Reduced component life
+  * Potential thermal distortion
+- Required actions for high T30:
+  * Reduce power setting
+  * Inspect combustor for damage
+  * Check fuel nozzle spray pattern
+  * Verify bleed valve operation
+
+3. PRESSURE RATIO (EPR) DEGRADATION
+- Normal EPR: 1.30 ± 0.05
+- Declining EPR indicates:
+  * Compressor fouling
+  * Turbine blade erosion
+  * Internal leakage
+- Maintenance procedures:
+  * Perform compressor water wash
+  * Borescope inspection of turbine
+  * Check clearances at turbine seals
+
+4. BLEED AIR SYSTEM
+- Bleed enthalpy normal range: 390 ± 10 BTU/lb
+- High bleed values suggest:
+  * Bleed valve malfunction
+  * Excessive secondary air flow
+- Corrective maintenance:
+  * Inspect bleed valve actuator
+  * Check valve seat for wear
+  * Verify control system operation
+
+5. FUEL SYSTEM
+- Normal fuel-air ratio (farB): 0.030 ± 0.002
+- Rich mixture (>0.033) causes:
+  * Incomplete combustion
+  * Carbon buildup
+  * High EGT
+- Lean mixture (<0.027) causes:
+  * Combustion instability
+  * Potential flameout
+- Maintenance actions:
+  * Clean fuel nozzles
+  * Check fuel pump output
+  * Verify fuel control unit calibration
+
+6. PREVENTIVE MAINTENANCE SCHEDULE
+- Daily: Visual inspection, vibration check
+- Weekly: Oil analysis, filter inspection
+- Monthly: Borescope inspection
+- Quarterly: Bearing inspection
+- Annual: Major overhaul assessment
+            

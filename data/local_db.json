@@ -1,0 +1,57 @@
+{
+  "decisions": [
+    {
+      "decision_id": "0e549f85-1cb3-4160-9c97-c90f53291378",
+      "timestamp": "2024-01-01T00:00:00",
+      "unit_id": 1,
+      "risk_level": "LOW",
+      "failure_mode": null,
+      "rul_prediction": null,
+      "anomaly_score": null,
+      "failure_probability": null,
+      "action_priority": null,
+      "maintenance_plan": null,
+      "requires_approval": null,
+      "approved": null,
+      "confidence": null,
+      "execution_time_ms": 10000.0,
+      "errors": []
+    },
+    {
+      "decision_id": "85c24295-06b0-4479-b4bc-c35eff76f244",
+      "timestamp": "2024-01-01T00:00:00",
+      "unit_id": 1,
+      "risk_level": "LOW",
+      "failure_mode": null,
+      "rul_prediction": null,
+      "anomaly_score": null,
+      "failure_probability": null,
+      "action_priority": null,
+      "maintenance_plan": null,
+      "requires_approval": null,
+      "approved": null,
+      "confidence": null,
+      "execution_time_ms": 10000.0,
+      "errors": []
+    },
+    {
+      "decision_id": "e82c0391-40c9-4c73-9912-e9f20322a1c7",
+      "timestamp": "2024-01-01T00:00:00",
+      "unit_id": 1,
+      "risk_level": "LOW",
+      "failure_mode": null,
+      "rul_prediction": null,
+      "anomaly_score": null,
+      "failure_probability": null,
+      "action_priority": null,
+      "maintenance_plan": null,
+      "requires_approval": null,
+      "approved": null,
+      "confidence": null,
+      "execution_time_ms": 10000.0,
+      "errors": []
+    },
+    {
+      "decision_id": "ec229442-61bf-4a7f-9c6e-e0ff85ddd329",
+      "timestamp": "2026-02-10T10:20:03.183228",
+      "unit_id": 
